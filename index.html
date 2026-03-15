@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Кредитные предложения Иркутской области</title>
-    <link rel="stylesheet" href="styles.css" />
+    <!-- Добавлен параметр версии, чтобы исключить кэширование старого стиля -->
+    <!-- Обновленная версия стилей: поменяли фон и размер иконок -->
+    <!-- Обновленная версия стилей для светлого фона шапки -->
+    <link rel="stylesheet" href="styles.css?v=darkblue2" />
 </head>
 <body>
     <header class="hero">
@@ -18,20 +21,23 @@
         <!-- Навигационные карточки -->
         <section class="nav-cards">
             <div class="card">
-                <img src="195D27DA-73F2-4D8D-92AB-7164FA99148C.jpeg" alt="Выгодные предложения" />
+                <!-- Иконка кубка для раздела "Самые выгодные предложения" -->
+                <img src="trophy.svg" alt="Переход к разделу выгодных предложений" class="nav-icon" />
                 <h3><a href="#top-offers">Самые выгодные предложения</a></h3>
             </div>
             <div class="card">
-                <img src="EBF8DEEB-B6FF-462F-9FE7-F384E3FB597B.jpeg" alt="Как правильно платить кредит" />
+                <!-- Иконка банковской карты для раздела "Как правильно платить кредит" -->
+                <img src="credit-card.svg" alt="Переход к разделу как платить кредит" class="nav-icon" />
                 <h3><a href="#how-to-pay">Как правильно платить кредит</a></h3>
             </div>
             <div class="card">
-                <img src="195D27DA-73F2-4D8D-92AB-7164FA99148C.jpeg" alt="Как выбрать кредит" />
+                <!-- Иконка поиска для раздела "Как выбрать самый выгодный кредит" -->
+                <img src="search.svg" alt="Переход к разделу как выбрать кредит" class="nav-icon" />
                 <h3><a href="#choose-credit">Как выбрать самый выгодный кредит</a></h3>
             </div>
-            <!-- New card for the credit calculator -->
+            <!-- Карточка для калькулятора кредита использует иконку калькулятора -->
             <div class="card">
-                <img src="EBF8DEEB-B6FF-462F-9FE7-F384E3FB597B.jpeg" alt="Кредитный калькулятор" />
+                <img src="calculator.svg" alt="Переход к разделу калькулятора" class="nav-icon" />
                 <h3><a href="#calculator">Кредитный калькулятор</a></h3>
             </div>
         </section>
@@ -221,10 +227,12 @@
                     }
                     var totalPayment = monthlyPayment * n;
                     var overpayment = totalPayment - amount;
+                    // Форматируем числа с пробелами (для тысяч) и двумя знаками после запятой
+                    var formatter = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                     resultEl.innerHTML =
-                        'Ежемесячный платеж: ' + monthlyPayment.toFixed(2) + ' ₽' + '<br>' +
-                        'Переплата: ' + overpayment.toFixed(2) + ' ₽' + '<br>' +
-                        'Общая выплата: ' + totalPayment.toFixed(2) + ' ₽';
+                        'Ежемесячный платеж: ' + formatter.format(monthlyPayment) + ' ₽' + '<br>' +
+                        'Переплата: ' + formatter.format(overpayment) + ' ₽' + '<br>' +
+                        'Общая выплата: ' + formatter.format(totalPayment) + ' ₽';
                 });
             }
         })();

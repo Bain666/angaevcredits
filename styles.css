@@ -3,17 +3,19 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     line-height: 1.5;
-    background: linear-gradient(180deg, #f6faff 0%, #ffffff 100%);
-    /* Текст тёмный, но слегка заметный: используем более мягкий тёмно‑серый цвет */
-    color: #444;
+    /* Светлая тема для основного контента
+       Основной фон максимально светлый, чтобы контент был легко читаем. */
+    background: linear-gradient(180deg, #f9fcff 0%, #ffffff 100%);
+    /* Чёрный текст для лучшей контрастности на светлом фоне */
+    color: #000;
 }
 
 /* Hero section */
 /* Hero section */
 .hero {
     position: relative;
-    /* Градиент для декоративного фона шапки. Если потребуется изображение, поместите файл hero.png в ту же папку и раскомментируйте строку url(). */
-    background: linear-gradient(135deg, #0077cc 0%, #004080 100%);
+    /* Тёмный градиент фона шапки */
+    background: linear-gradient(135deg, #004d8a 0%, #002c56 100%);
     /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero.png') center/cover no-repeat; */
     min-height: 260px;
     display: flex;
@@ -24,7 +26,8 @@ body {
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.4);
+    /* Сделаем фон под текстом в шапке немного светлее, уменьшив непрозрачность */
+    background: rgba(0, 0, 0, 0.25);
     padding: 40px;
     border-radius: 8px;
 }
@@ -61,6 +64,23 @@ body {
     object-fit: cover;
 }
 
+/* Минималистичные иконки-пины для навигационных карточек */
+.nav-icon {
+    /* Базовый стиль для иконок-пинов */
+    width: 60px;
+    height: 60px;
+    margin: 20px auto 0;
+    object-fit: contain;
+}
+
+/* Более специфический селектор, чтобы переопределить размер изображений внутри карточек */
+.card .nav-icon {
+    width: 60px;
+    height: 60px;
+    margin: 20px auto 0;
+    object-fit: contain;
+}
+
 .card h3 {
     margin: 10px;
     font-size: 1.1em;
@@ -68,6 +88,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #113b66;
 }
 
 .card a {
@@ -104,7 +125,14 @@ th, td {
 
 th {
     background: #f0f5ff;
+    color: #113b66;
     font-weight: 600;
+}
+
+td {
+    background: #ffffff;
+    /* Чёрный текст в ячейках таблицы для высокой контрастности */
+    color: #000;
 }
 
 /* Offers */
@@ -146,9 +174,12 @@ th {
 #calculator input {
     padding: 8px;
     margin-top: 5px;
+    background: #ffffff;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 1em;
+    /* Чёрный текст в полях ввода для лучшей читаемости */
+    color: #000;
 }
 
 #calculator button {
@@ -173,21 +204,22 @@ th {
 
 /* Footer */
 footer {
-    background: #f7f9fc;
+    /* Сделаем подвал таким же синим, как и шапка, используя тот же градиент */
+    background: linear-gradient(135deg, #004d8a 0%, #002c56 100%);
     padding: 20px 0;
     text-align: center;
     font-size: 0.9em;
-    color: #444;
+    color: #bbb;
 }
 
 footer a {
-    color: #0077cc;
+    color: #77bdf7;
 }
 
 footer .author {
     margin-top: 5px;
     font-style: italic;
-    color: #555;
+    color: #999;
 }
 
 @media (max-width: 768px) {
