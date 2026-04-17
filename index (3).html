@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кредитные предложения Иркутской области</title>
+    <!-- Добавлен параметр версии, чтобы исключить кэширование старого стиля -->
+    <!-- Обновленная версия стилей: поменяли фон и размер иконок -->
+    <!-- Обновленная версия стилей для светлого фона шапки -->
+    <link rel="stylesheet" href="styles.css?v=darkblue2" />
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>Кредитные предложения Иркутской области</h1>
+            <p class="update-date">Актуальные предложения на 17 марта 2026 года</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Навигационные карточки -->
+        <section class="nav-cards">
+            <div class="card">
+                <!-- Иконка кубка для раздела "Самые выгодные предложения" -->
+                <img src="trophy.svg" alt="Переход к разделу выгодных предложений" class="nav-icon" />
+                <h3><a href="#top-offers">Самые выгодные предложения</a></h3>
+            </div>
+            <div class="card">
+                <!-- Иконка банковской карты для раздела "Как правильно платить кредит" -->
+                <img src="credit-card.svg" alt="Переход к разделу как платить кредит" class="nav-icon" />
+                <h3><a href="#how-to-pay">Как правильно платить кредит</a></h3>
+            </div>
+            <div class="card">
+                <!-- Иконка поиска для раздела "Как выбрать самый выгодный кредит" -->
+                <img src="search.svg" alt="Переход к разделу как выбрать кредит" class="nav-icon" />
+                <h3><a href="#choose-credit">Как выбрать самый выгодный кредит</a></h3>
+            </div>
+            <!-- Карточка для калькулятора кредита использует иконку калькулятора -->
+            <div class="card">
+                <img src="calculator.svg" alt="Переход к разделу калькулятора" class="nav-icon" />
+                <h3><a href="#calculator">Кредитный калькулятор</a></h3>
+            </div>
+        </section>
+
+        <!-- Раздел: Кредитный калькулятор -->
+        <section id="calculator" class="content-section">
+            <h2>Кредитный калькулятор</h2>
+            <p>Введите параметры кредита, чтобы рассчитать ежемесячный платеж, переплату и общую сумму выплат. Этот простой калькулятор работает по принципу аннуитетных платежей — регулярных равных платежей, которые используются большинством банков.</p>
+            <form id="calc-form">
+                <label>
+                    Сумма кредита (₽):
+                    <input type="number" id="loan-amount" min="1000" step="100" placeholder="Например, 300000" />
+                </label>
+                <label>
+                    Годовая ставка (%):
+                    <input type="number" id="interest-rate" step="0.1" min="0" placeholder="Например, 12.5" />
+                </label>
+                <label>
+                    Срок (месяцы):
+                    <input type="number" id="loan-term" min="1" placeholder="Например, 24" />
+                </label>
+                <button type="button" id="calculate-btn">Рассчитать</button>
+            </form>
+            <div id="calc-result" class="calc-result"></div>
+        </section>
+
+        <!-- Раздел: Как правильно платить кредит -->
+        <section id="how-to-pay" class="content-section">
+            <h2>Как правильно платить кредит</h2>
+            <p>Чтобы оптимально погашать кредит, рекомендуется вносить досрочные платежи в дату основного платежа — тогда вся сумма направляется на уменьшение основного долга, что помогает быстрее погасить займ. Если вносить деньги в другие дни, сначала гасятся проценты.</p>
+            <p>Выбирая способ досрочного погашения, ориентируйтесь на свою финансовую нагрузку: при высоком уровне долгов лучше уменьшать ежемесячный платёж, а когда доход позволяет — сокращать срок кредита. Комбинированная стратегия (сначала снижение платежа, затем сокращение срока) помогает снизить нагрузку и уменьшить переплату.</p>
+        </section>
+
+        <!-- Раздел: ТОП‑10 банков -->
+        <section id="top-offers" class="content-section">
+            <h2>ТОП‑10 банков Иркутской области</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Банк</th>
+                            <th>ПСК, %</th>
+                            <th>Ставка, %</th>
+                            <th>Сумма, ₽</th>
+                            <th>Срок</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a class="bank-link" href="https://rbk.money/products/kredity/kredity-nalichnymi/bank-sinara/" target="_blank">Синaра</a></td>
+                            <td>11,90–39,00</td>
+                            <td>от 11,9</td>
+                            <td>51 тыс.–2 млн</td>
+                            <td>1–5 лет</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://rbk.money/elec/products/kredity/kredity-nalichnymi/sberbank/" target="_blank">СберБанк</a></td>
+                            <td>15,00–35,00</td>
+                            <td>от 15,7</td>
+                            <td>30 тыс.–5 млн</td>
+                            <td>1–7 лет</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://www.vtb.ru/personal/kredit/" target="_blank">ВТБ</a></td>
+                            <td>16,00–35,00</td>
+                            <td>от 14,9</td>
+                            <td>50 тыс.–7 млн</td>
+                            <td>1–7 лет</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://www.gazprombank.ru/personal/take_credit/consumer_credit/5004451/" target="_blank">Газпромбанк</a></td>
+                            <td>17,00–36,00</td>
+                            <td>от 16,0</td>
+                            <td>30 тыс.–3 млн</td>
+                            <td>1–5 лет</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://www.rshb.ru/natural/loans/loans-online" target="_blank">Россельхозбанк</a></td>
+                            <td>16,50–36,00</td>
+                            <td>от 15,0</td>
+                            <td>50 тыс.–3 млн</td>
+                            <td>1–5 лет</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://rbk.money/products/kredity/kredity-bez-zaloga/sovkombank/" target="_blank">Совкомбанк</a></td>
+                            <td>17,00–38,00</td>
+                            <td>от 15,9</td>
+                            <td>40 тыс.–1 млн</td>
+                            <td>1–5 лет</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://www.mtsbank.ru/chastnim-licam/krediti/credit-all/" target="_blank">МТС Банк</a></td>
+                            <td>16,00–37,00</td>
+                            <td>от 14,5</td>
+                            <td>20 тыс.–1 млн</td>
+                            <td>1–4 года</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://eurocredit.ru/credit/otkrytie/" target="_blank">Открытие</a></td>
+                            <td>16,00–36,00</td>
+                            <td>от 15,5</td>
+                            <td>50 тыс.–2 млн</td>
+                            <td>1–5 лет</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://rbk.money/novocheboksarsk/products/kredity/alyfa-bank/" target="_blank">Альфа‑Банк</a></td>
+                            <td>17,00–37,00</td>
+                            <td>от 16,0</td>
+                            <td>50 тыс.–5 млн</td>
+                            <td>1–7 лет</td>
+                        </tr>
+                        <tr>
+                            <td><a class="bank-link" href="https://dobro-bank.ru/raiffeisen/personalniy/" target="_blank">Райффайзенбанк</a></td>
+                            <td>16,00–35,00</td>
+                            <td>от 14,5</td>
+                            <td>50 тыс.–3 млн</td>
+                            <td>1–5 лет</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Раздел: Примеры выгодных предложений -->
+        <section class="content-section">
+            <h2>Примеры выгодных предложений</h2>
+            <div class="offers">
+                <div class="offer">
+                    <h3>Ипотека</h3>
+                    <p>СберБанк с 26 февраля 2026 года снизил ставки: на новостройки от 15,7 % годовых, на вторичный рынок — от 16,5 %.</p>
+                </div>
+                <div class="offer">
+                    <h3>Кредитная карта</h3>
+                    <p>«СберКарта» предлагает льготный период 120 дней, бесплатное обслуживание и ставку 9,8 % на категории «Здоровье» и SberMegaMarket, при лимите до 1 000 000 ₽.</p>
+                </div>
+                <div class="offer">
+                    <h3>Потребительский кредит</h3>
+                    <p>Банк Синaра выдаёт кредит на любую цель без залога и поручителей: сумма 51 000 – 5 440 000 ₽, срок до 5 лет, ставка от 11,9 %.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Раздел: Как выбрать выгодный кредит -->
+        <section id="choose-credit" class="content-section">
+            <h2>Как выбрать выгодный кредит</h2>
+            <p>При выборе кредита важно учитывать несколько факторов: изучите размер полной стоимости кредита и процентную ставку, оцените свои доходы и уровень закредитованности, сравните сроки и суммы, обратите внимание на дополнительные требования к заёмщикам.</p>
+            <p>Перед подачей заявки подготовьте документы, проанализируйте кредитную историю и обязательно читайте условия договора. Внешний вид и корректное общение при визите в банк также влияют на решение.</p>
+        </section>
+
+        <!-- Раздел: Полезные рекомендации -->
+        <section class="content-section">
+            <h2>Полезные рекомендации</h2>
+            <ul>
+                <li>Поддерживайте положительную кредитную историю — своевременные платежи повышают шансы на одобрение.</li>
+                <li>При посещении банка держите при себе паспорт и другие документы, соблюдайте деловой стиль одежды.</li>
+                <li>Трезво оценивайте свои финансовые возможности: берите только ту сумму, которую сможете вернуть без серьёзных нагрузок на бюджет.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Источники: <a href="https://www.banki.ru/news/">banki.ru</a>, <a href="https://www.rbc.ru/">RBC</a>, <a href="https://www.topbanki.ru/">topbanki.ru</a></p>
+        <p class="author">Разрабатывал Ангаев Баин, ученик 9а класса, школы № 14, для проектной работы.</p>
+    </footer>
+
+    <!-- Скрипт для кредитного калькулятора -->
+    <script>
+        (function() {
+            var btn = document.getElementById('calculate-btn');
+            if (btn) {
+                btn.addEventListener('click', function() {
+                    var amount = parseFloat(document.getElementById('loan-amount').value);
+                    var rate = parseFloat(document.getElementById('interest-rate').value);
+                    var term = parseInt(document.getElementById('loan-term').value);
+                    var resultEl = document.getElementById('calc-result');
+                    if (isNaN(amount) || amount <= 0 || isNaN(rate) || isNaN(term) || term <= 0) {
+                        resultEl.textContent = 'Пожалуйста, введите корректные данные.';
+                        return;
+                    }
+                    var monthlyRate = rate / 100 / 12;
+                    var n = term;
+                    var monthlyPayment;
+                    if (monthlyRate === 0) {
+                        monthlyPayment = amount / n;
+                    } else {
+                        monthlyPayment = amount * monthlyRate / (1 - Math.pow(1 + monthlyRate, -n));
+                    }
+                    var totalPayment = monthlyPayment * n;
+                    var overpayment = totalPayment - amount;
+                    // Форматируем числа с пробелами (для тысяч) и двумя знаками после запятой
+                    var formatter = new Intl.NumberFormat('ru-RU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                    resultEl.innerHTML =
+                        'Ежемесячный платеж: ' + formatter.format(monthlyPayment) + ' ₽' + '<br>' +
+                        'Переплата: ' + formatter.format(overpayment) + ' ₽' + '<br>' +
+                        'Общая выплата: ' + formatter.format(totalPayment) + ' ₽';
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
